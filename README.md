@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ Next.js 15 Full-Stack Starter Template
 
-## Getting Started
+A modern full-stack boilerplate powered by Next.js 15 (App Router), designed for building scalable web apps fast — with built-in authentication, theming, role-based access control, and testing.
 
-First, run the development server:
+![screenshot][product-screenshot-1]
+
+---
+
+## ✨ Features
+
+### ✅ Authentication & Authorization
+
+- Email + password authentication
+- JWT token-based sessions (HttpOnly cookies)
+- Role-based access (e.g. admin, user)
+- Middleware-protected routes
+
+### 🎨 Styling & Theming
+
+- Tailwind CSS with dark/light mode (system default)
+- Theme toggle dropdown (light / dark / system)
+- Custom Google + local fonts
+- Configurable color palette via CSS variables
+
+### 🧠 Developer Experience
+
+- App Router (Next.js 14)
+- TypeScript, Zod, React Hook Form
+- Path aliases (`@/`) for cleaner imports
+- File-based routing with layout support
+
+### 🧪 Testing
+
+- ✅ Jest + React Testing Library for unit tests
+- ✅ Cypress for end-to-end testing
+- `start-server-and-test` script for seamless E2E flow
+
+### 📦 Full Stack Integration
+
+- MongoDB + Mongoose
+- Password hashing with bcrypt
+- Secure password reset via token
+- Toast notifications using ShadCN
+
+---
+
+## 🚀 Getting Started
 
 ```bash
+# 1. Clone the repo
+git clone https://github.com/your-username/nextjs-starter.git
+cd nextjs-starter
+
+# 2. Install dependencies
+npm install
+
+# 3. Add your environment variables
+cp .env.example .env.local
+# Edit MONGO_URI and JWT_SECRET
+
+# 4. Run the dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧪 Run Tests
 
-## Learn More
+```bash
+npm run test
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✅ E2E Tests (Cypress)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run test:e2e
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠 Folder Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+/app            # Next.js App Router structure
+/components     # Reusable UI components (ShadCN)
+/cypress        # Cypress E2E Testing
+/models         # DB Models (e.g., User)
+/lib            # JWT, DB, auth utilities
+/hooks          # Custom hooks (e.g., use-toast)
+app/api         # API routes for auth/reset
+/public         # Static files (e.g. logo, images)
+/types          # Typescript Type Definitions
+```
+
+---
+
+## 🛡️ Environment Variables
+
+```bash
+MONGO_URI=<your-mongodb-uri>
+JWT_SECRET=<your-secret>
+RESEND_API_KEY=<resend-api-key>
+```
+
+---
+
+## 📄 License
+
+MIT — free for personal and commercial use.
+
+---
+
+## 👋 Author
+
+Built with ❤️ by Reggie Evans
+
+[product-screenshot-1]: public/images/screenshot-1.png
