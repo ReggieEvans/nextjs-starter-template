@@ -118,4 +118,4 @@ MIT — free for personal and commercial use.
 
 Built with ❤️ by Reggie Evans
 
-[product-screenshot-1]: public/images/screenshot-1.png
+[product-screenshot-1]: public/screenshot-1.png
